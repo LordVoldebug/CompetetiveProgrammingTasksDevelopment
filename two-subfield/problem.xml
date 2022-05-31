@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="10" short-name="two-subfield" url="https://polygon.codeforces.com/p6BVgqg/LordVoldebug/two-subfield">
+    <names>
+        <name language="russian" value="На брезентовом поле..."/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="russian" mathjax="true" path="statements/russian/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="russian" mathjax="true" path="statements/.html/russian/problem.html" type="text/html"/>
+        <statement language="russian" path="statements/.pdf/russian/problem.pdf" type="application/pdf"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>4000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>27</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test cmd="gen 10 2 12" method="generated"/>
+                <test cmd="gen 20 7 18" method="generated"/>
+                <test cmd="gen 7 20 120" method="generated"/>
+                <test cmd="gen 72 30 1290" method="generated"/>
+                <test cmd="gen 52 67 2290" method="generated"/>
+                <test cmd="gen 100 100 2000" method="generated"/>
+                <test cmd="gen 100 200 9000" method="generated"/>
+                <test cmd="gen 100 150 15000" method="generated"/>
+                <test cmd="gen 200 550 15000" method="generated"/>
+                <test cmd="gen 500 550 173000" method="generated"/>
+                <test cmd="gen 1000 1000 5000" method="generated"/>
+                <test cmd="gen 1000 1000 500000" method="generated"/>
+                <test cmd="gen 1000 1000 900000" method="generated"/>
+                <test cmd="gen 1000 1000 130000" method="generated"/>
+                <test cmd="gen 2000 500 3232" method="generated"/>
+                <test cmd="gen 250 4000 644644" method="generated"/>
+                <test cmd="gen 5000 200 558939" method="generated"/>
+                <test cmd="gen 10000 100 899433" method="generated"/>
+                <test cmd="gen 2000 500 200" method="generated"/>
+                <test cmd="gen 250 4000 20000" method="generated"/>
+                <test cmd="gen 5000 200 200000" method="generated"/>
+                <test cmd="gen 10000 100 344545" method="generated"/>
+                <test cmd="gen 100000 10 200" method="generated"/>
+                <test cmd="gen 100000 10 200000" method="generated"/>
+                <test cmd="gen 100000 10 800000" method="generated"/>
+                <test cmd="gen 10 100000 732000" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.g++17"/>
+                <binary path="files/gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validate.cpp" type="cpp.g++17"/>
+                <binary path="files/validate.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validate.cpp" type="cpp.g++17"/>
+                <binary path="files/validate.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>2</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="main">
+                <source path="solutions/two-subfield-n2.cpp" type="cpp.g++17"/>
+                <binary path="solutions/two-subfield-n2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/two-subfield-n3.cpp" type="cpp.g++17"/>
+                <binary path="solutions/two-subfield-n3.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="linear"/>
+        <tag value="stack"/>
+    </tags>
+</problem>
