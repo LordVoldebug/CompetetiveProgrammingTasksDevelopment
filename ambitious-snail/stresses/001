@@ -1,0 +1,1 @@
+{"id":"2c054c72ad26dc83c2c36667dd053aa9","index":1,"scriptPattern":"gen 7 [1..7]","inputFile":"stdin","outputFile":"stdout","memoryLimit":256,"timeLimit":1000,"totalTimeLimit":5000,"solutionNames":["snail-nfact.cpp","snail-n-ac.cpp"],"description":"","solutionNamesUid":""}
